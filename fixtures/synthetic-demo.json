@@ -1,0 +1,38 @@
+{
+  "source_mode": "SYNTHETIC - invented kit model, not a GitHub API response",
+  "schema_checked_on": "2026-10-21",
+  "cohort": {
+    "scope": "fictional-eight-seat-ide-cohort",
+    "window_start": "2026-09-20",
+    "window_end": "2026-10-17",
+    "coverage": "Synthetic IDE observations only; other surfaces and real telemetry are not assessed.",
+    "seats": [
+      { "user": "demo-user-01", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-01", "2026-10-08"] },
+      { "user": "demo-user-02", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-02", "2026-10-09"] },
+      { "user": "demo-user-03", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-03", "2026-10-10"] },
+      { "user": "demo-user-04", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-04", "2026-10-11"] },
+      { "user": "demo-user-05", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-05"] },
+      { "user": "demo-user-06", "assigned_on": "2026-09-01", "observed_ide_days": ["2026-10-06"] },
+      { "user": "demo-user-07", "assigned_on": "2026-09-01", "observed_ide_days": [] },
+      { "user": "demo-user-08", "assigned_on": "2026-09-01", "observed_ide_days": [] }
+    ]
+  },
+  "completion_slice": {
+    "scope": "same fictional cohort and 28-day window; completions only",
+    "generated": 300,
+    "accepted": 120
+  },
+  "billing_example": {
+    "scope": "SEPARATE fictional billing entity; stable seats for the completed September 2026 calendar month",
+    "month": "2026-09",
+    "business_seats": 100,
+    "enterprise_seats": 0,
+    "business_included_credits_per_seat": 1900,
+    "enterprise_included_credits_per_seat": 3900,
+    "business_list_price_usd": 19,
+    "enterprise_list_price_usd": 39,
+    "consumed_credits": 210000,
+    "usd_per_credit": 0.01,
+    "qualification": "Static list-price estimate, before taxes, discounts, adjustments, Actions and other charges. Not a tenant bill."
+  }
+}

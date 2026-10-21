@@ -1,0 +1,7 @@
+# Tenant evidence does not belong in the public guide.
+private-evidence/
+exports/
+screenshots/
+.env
+.env.*
+*.log
