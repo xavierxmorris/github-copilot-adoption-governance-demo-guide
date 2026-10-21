@@ -16,6 +16,14 @@ Role authorization and token permissions are separate checks. Do not infer App/f
 
 Documented enterprise navigation: **Insights -> Copilot usage**. Current minimum reporting versions include VS Code 1.107.1 and Copilot Chat 0.35.3; other clients have separate requirements. Billing-display minimum versions are a different requirement. [M03-M05](SOURCES.md#m03), [M11](SOURCES.md#m11)
 
+## Read-only billing navigation
+
+Enterprise: **Billing & Licensing -> Usage -> AI usage**. Organization: **Settings -> Access sidebar section -> Billing & Licensing -> Usage -> AI usage**. The organization **Access** sidebar section is not **Copilot -> Access**. Current documentation permits enterprise owners/billing managers to filter by user, but organization owners cannot view user-level consumption directly in that UI and need an approved report. [M16](SOURCES.md#m16)
+
+Budgets are under **Billing & Licensing -> Budgets and alerts**. Prepare any detailed stop-state evidence off-clock; do not enter edit flows or change/save values during the demo. Metered-spending stop behavior is off by default, while user-level budgets always hard-stop applicable AI-credit-consuming features. These limits do not switch off included code completions/next edit suggestions. [W07-W08](SOURCES.md#w07)
+
+The usage dashboard's **Export JSON** button produces NDJSON. The activity report is CSV; AI billing reports are another dataset and report-generation workflow. Do not apply one report's parser, time window or signed-link lifetime to another. [M17](SOURCES.md#m17), [M10](SOURCES.md#m10), [M16](SOURCES.md#m16)
+
 ## Current API templates
 
 Documentation-derived read-only templates below are **not executed by this kit**. Use an approved account, scope and private destination. Current fetched examples use `Accept: application/vnd.github+json` and `X-GitHub-Api-Version: 2026-03-10`. Never print authentication headers.

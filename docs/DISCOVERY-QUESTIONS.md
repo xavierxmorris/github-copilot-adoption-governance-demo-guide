@@ -2,6 +2,8 @@
 
 Use the **first six** during the 30-minute demo; use the deeper bank in discovery or follow-up. Capture real names/decisions privately, not in this public repository.
 
+The [click-by-click walkthrough](../GITHUB-STEP-BY-STEP.md) places a relevant question beside each feature. Choose among those prompts; do not try to ask this whole bank in 30 minutes.
+
 ## Six questions that must produce a decision
 
 | Priority | Ask | Strong answer / decision enabled |

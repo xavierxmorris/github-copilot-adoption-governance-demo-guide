@@ -15,6 +15,14 @@
 
 Sources: [G01](SOURCES.md#g01), [G05-G06](SOURCES.md#g05), [G10-G14](SOURCES.md#g10).
 
+## Managed client guardrails need delivery evidence
+
+Enterprise-managed settings can enforce supported permission rules and sandbox floors, rather than merely requesting compliant behavior in instructions. The current reference distinguishes each key and client: VS Code granular permission rules require Agent Host, and the local sandbox and managed MCP allow/deny keys are not documented as supported by cloud agent. Inspect the specific support row, not just the list of supported clients. [G24](SOURCES.md#g24), [G26](SOURCES.md#g26)
+
+Show the selected governance source, configuration validation and a preverified client result. The absence of a validation warning does not prove delivery or runtime enforcement. Server-managed refreshes are normally applied within about an hour; the CLI can lack that policy when the first request fails and no cached policy exists. Device-delivered settings and `forceRemoteSettingsRefresh` have their own startup requirements. Do not promise universal fail-closed behavior from an uploaded JSON file. [G24](SOURCES.md#g24), [G26](SOURCES.md#g26), [W02](SOURCES.md#w02)
+
+Enterprise model availability is also not a universal model-endpoint boundary: the CLI administration guide says locally supplied LLM keys are not controlled by enterprise policies. Approve or prohibit that data path separately through the organization's actual device, network and data-governance controls. [G27](SOURCES.md#g27)
+
 ## Read-only cloud-agent PR walk-through
 
 Use a disposable, approved repository and an already-completed task.
@@ -34,7 +42,7 @@ The application card documents native pushes to the relevant PR branch/new `copi
 
 Content exclusion is supported on specified surfaces, including documented inline completions and VS Code Chat, but VS Code Edit/Agent modes are explicitly unsupported. Symlinks, remote filesystems and indirect semantic context have limitations. GitHub.com/Mobile support is marked preview. [G07-G08](SOURCES.md#g07)
 
-**Unresolved official conflict:** the concepts table marks CLI supported, while the configuration guide says CLI does not support exclusions. Do not rely on CLI exclusion for compliance until GitHub clarifies and the exact client is tested. Do not infer cloud-agent-wide DLP from a website-wide table.
+**Unresolved official conflict:** the concepts table and CLI administration guide say CLI is supported, while the exclusion configuration guide says CLI does not support exclusions. Do not rely on CLI exclusion for compliance until GitHub clarifies and the exact client is tested. Do not infer cloud-agent-wide DLP from a website-wide table. [G27](SOURCES.md#g27)
 
 Public-code references cover indexed public GitHub code, not every source or license. Cloud agent/CLI may still generate matches despite Block. References/filtering are review aids, not a guarantee of non-infringement. [G04](SOURCES.md#g04), [G11](SOURCES.md#g11), [G21](SOURCES.md#g21)
 
@@ -50,6 +58,10 @@ actor:Copilot
 These are search filters, not an exhaustive detection rule or exact event-action schema. Inspect the returned action/actor and approved dates. GitHub recommends streaming to a SIEM for longer history; confirm enterprise eligibility, event coverage, destination access and retention. [G15](SOURCES.md#g15)
 
 Local client prompts are explicitly outside this Copilot audit-log coverage. Hooks/client logging, agent session logs, PR history and SIEM records are different evidence sources with their own data sensitivity and retention. A signed commit/session link does not establish immutable indefinite transcript retention.
+
+Cloud sessions are shared by default with people who have repository access; local sessions are unshared by default. Preverify access to the prepared session rather than granting write permission simply to view it. Triggering work and viewing an existing shared session are different operations. [E01-E02](SOURCES.md#e01)
+
+If an auditor requires content beyond ordinary audit events, assess collection channels separately. Current documentation describes **Copilot Usage Records Streaming** as preview-gated with specific enterprise eligibility and potentially sensitive request/response content. Managed OpenTelemetry also has distinct identity/content capture controls and client/harness support. Neither is automatically enabled by viewing the audit log, retroactively reconstructs missing evidence, or removes the need for privacy approval, an approved destination and retention/access controls. No collection channel is configured by this kit. [E05](SOURCES.md#e05), [G26](SOURCES.md#g26)
 
 Recommended evidence chain:
 

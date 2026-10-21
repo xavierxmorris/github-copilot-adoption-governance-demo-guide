@@ -8,6 +8,7 @@ Research checked **21 October 2026** against official GitHub documentation, curr
 
 | Need | Open |
 |---|---|
+| Follow GitHub screens click by click | [GitHub step-by-step walkthrough](GITHUB-STEP-BY-STEP.md) |
 | Deliver the session | [30-minute run sheet](RUN-SHEET.md) |
 | Prepare permissions, tabs and fallbacks | [Preflight](docs/PREFLIGHT.md) |
 | Ask the right questions | [Discovery questions](docs/DISCOVERY-QUESTIONS.md) |
@@ -65,4 +66,4 @@ Current corporate billing uses pooled **AI credits**, not old Business/Enterpris
 
 This is documentary research plus an executable synthetic rehearsal. It is **not** a tenant validation, penetration test, legal opinion, certification or a measured ROI study. Preview labels, UI navigation, models and billing can change. Contradictory documentation and unverified client enforcement are explicitly recorded in [RESEARCH.md](docs/RESEARCH.md).
 
-Research agents used **max reasoning effort**. The parent session's selected model, effort and context settings were not changed.
+Research calls requested **max reasoning effort**; workers could not independently inspect the runtime effort selector. The parent session's selected model, effort and context settings were not changed.

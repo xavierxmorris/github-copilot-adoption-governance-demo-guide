@@ -116,7 +116,7 @@ Processor/subprocessor roles, specified controller purposes, preview exclusions 
 
 [GitHub Copilot with data residency](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency)
 
-Eligible GHE Cloud with data residency, US/EU availability, clients and disabled-by-default compliant-model restriction. Not blanket worldwide residency.
+Eligible GHE Cloud with data residency, US/EU availability, clients and disabled-by-default compliant-model restriction. Current page also documents a 10% increase in AI-credit consumption for region-enforced requests. Not blanket worldwide residency.
 
 ## G20
 
@@ -135,6 +135,36 @@ Public-code reference/index/acceptance limitations.
 [Customizing the cloud-agent development environment](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment)
 
 Environment/setup behavior, self-hosted/Windows constraints and setup failure not being a fail-closed compliance gate.
+
+## G24
+
+[Getting started with enterprise-managed settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/get-started)
+
+Selected governance repository, `copilot/managed-settings.json`, per-property client support, configuration validation on **AI controls -> Agents**, and client refresh checks. A file merely present in an arbitrary repository is not a deployed enterprise policy.
+
+## G26
+
+[Enterprise managed settings reference](https://docs.github.com/en/copilot/reference/enterprise-administrators/enterprise-managed-settings)
+
+Per-key/client support, permission deny/ask/allow rules, disabling bypass permission modes, sandbox floors, plugin restrictions, MCP allow/deny rules and startup-refresh semantics. Granular VS Code permission rules require Agent Host; these local controls do not automatically govern cloud agent.
+
+## G27
+
+[Administering Copilot CLI for your enterprise](https://docs.github.com/en/copilot/how-tos/copilot-cli/administer-copilot-cli-for-your-enterprise)
+
+CLI versus desktop-app enablement, GitHub-provided model policy and locally supplied BYOK distinction, delegation prerequisites and policy-change audit scope. This page says CLI content exclusion applies, agreeing with G07 but conflicting with G08.
+
+## G28
+
+[Creating a `.github-private` repository](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/create-github-private-repo)
+
+**AI controls -> Agents -> Configuration source** selection and configuration summary. Internal/private governance source, visibility versus enforcement scope, and protection of governance changes through rulesets.
+
+## G29
+
+[Managing the availability of models in an organization](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-default-models)
+
+**Settings -> Copilot -> Models**, shield versus dropdown indicators and **Delegate to Default Policy**. Organization model settings unavailable when the enterprise-teams model-access preview is enabled.
 
 ## M01
 
@@ -226,6 +256,18 @@ Model/token/caching pricing, completion exemption and code-review Actions charge
 
 Existing annual personal Pro/Pro+ exception after June 2026; not current corporate premium-request allowances.
 
+## M16
+
+[Viewing billing usage and AI usage](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use)
+
+Retrieved **2026-10-21**. Enterprise/organization **Billing & Licensing -> Usage -> AI usage**, role-dependent user visibility, **Group by -> Products**, and **Get usage report -> report details -> Email me the report**. This is billing consumption, not the Copilot adoption dashboard. Report-link expiry is not a universal metrics-download TTL.
+
+## M17
+
+[Tracking usage and adoption](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption)
+
+Retrieved **2026-10-21**. Dashboard **Export JSON** control with documented NDJSON output and adoption interpretation.
+
 ## A01
 
 [Measuring the success of a Copilot trial](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/measure-success)
@@ -237,6 +279,120 @@ Goals, adoption/engagement, qualitative feedback, API/report use and expansion d
 [Driving team adoption of agentic Copilot](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/enable-developers/drive-team-agentic-adoption)
 
 Two-week activation sprint, owners, representative teams, approved workflows, baseline/outcomes and stop criteria. Explicitly not enough evidence for long-term causal productivity/cost claims.
+
+## Click-by-click procedure sources
+
+The following additional procedures were fetched on **2026-10-21** for [the GitHub walkthrough](../GITHUB-STEP-BY-STEP.md). Existing G/M sources above were reused where their procedures establish the navigation. These are documentation checks, not claims that tenant screens were operated.
+
+## W01
+
+[Managing availability of models in your enterprise](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models)
+
+**AI controls -> Copilot -> Configure models**, model states and opt-in enterprise-teams mode, which deactivates organization-level model settings. Do not switch modes during the demo.
+
+## W02
+
+[Choosing how to deploy enterprise-managed settings](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/use-managed-settings/deploy-managed-settings)
+
+Server-managed `copilot/managed-settings.json`, MDM/file delivery, account/device scope, refresh behavior and CLI cold-start retrieval/no-cache limitation. This guide does not deploy or alter these controls.
+
+## W03
+
+[Adding cloud agent to your organization](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/add-copilot-cloud-agent)
+
+**Settings -> Copilot -> Cloud agent -> Repository access**, entitlement versus repo controls, automations and partner-agent context.
+
+## W04
+
+[Granting access to Copilot for organization members](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access)
+
+**Settings -> Copilot -> Access**, organization-owner role and purchase side effects. Used to identify where to inspect and where the read-only walkthrough must stop, not to authorize purchases.
+
+## W05
+
+[Reviewing user activity in an organization](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/review-activity/review-user-activity-data)
+
+Access overview, **Access management -> Sort**, activity/report distinction and last-activity troubleshooting.
+
+## W06
+
+[Downloading a Copilot activity report](https://docs.github.com/en/copilot/how-tos/administer-copilot/download-activity-report)
+
+Enterprise **Billing & Licensing -> Licensing -> Copilot** report location and organization **Copilot -> Access -> Get usage report -> Get activity report**. No real report is downloaded by the kit.
+
+## W07
+
+[Setting up budgets for metered products](https://docs.github.com/en/billing/how-tos/set-up-budgets)
+
+Account-specific **Billing & Licensing -> Budgets and alerts**, view/filter/edit navigation, budget scopes and alert/stop settings. The walkthrough inspects existing values only.
+
+## W08
+
+[Budgets for usage-based billing](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets)
+
+User-level hard stops, metered-spending stop option, cost-center exclusions, included-usage controls and overlapping limits. A single enterprise amount is not automatically an all-cost cap.
+
+## W09
+
+[Managing rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository)
+
+Read-access viewing route: branch dropdown -> **View all branches** -> shield -> ruleset; `/rules` alternative and PR merge-box evidence. No creation, editing or bypass is needed.
+
+## W10
+
+[Using cloud agent on GitHub](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github)
+
+PR/session interaction, activity timeline and actions that start new work. Authored [public source](https://github.com/github/docs/blob/main/content/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github.md) fetched for this follow-up; the guide inspects an existing PR and does not invoke those actions.
+
+## W11
+
+[Viewing the Copilot impact dashboard](https://docs.github.com/en/copilot/how-tos/administer-copilot/view-impact-dashboard)
+
+**Enterprise -> Insights -> Copilot impact**, metrics prerequisite and directional rather than exact financial interpretation.
+
+## W12
+
+[Getting started with budget controls](https://docs.github.com/en/copilot/tutorials/budgets/getting-started-with-budget-controls)
+
+User-level versus enterprise spending limits, explicit stop setting and monitoring guidance. Used as explanatory context, not a request to create/change a budget.
+
+## Additional evidence procedures
+
+## E01
+
+[Managing and tracking Copilot agents](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents)
+
+Retrieved **2026-10-21**. Repository **Agents -> All sessions** and cloud sessions shared by default with repository-access holders. Viewing existing sessions is distinct from triggering work, which requires write access.
+
+## E02
+
+[Copilot session data](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/session-data)
+
+Retrieved **2026-10-21**. Cloud versus local sharing defaults and sensitive session content. Sharing/link availability is not an indefinite retention guarantee.
+
+## E03
+
+[Reviewing the audit log for your organization](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization)
+
+Retrieved **2026-10-21**. Organization-owner **Settings -> Archive -> Logs -> Audit log** route, filtered JSON/CSV exports, default view versus retained history and export limitations. Not enterprise-wide evidence.
+
+## E04
+
+[Reviewing Copilot's output](https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/review-copilot-output)
+
+Retrieved **2026-10-21**. Commit-message session links, PR/session inspection and review of the actual generated change. Read-only inspection does not require launching a task.
+
+## E05
+
+[Agentic audit log events](https://docs.github.com/en/copilot/reference/enterprise-administrators/agentic-audit-log-events)
+
+Retrieved **2026-10-21**. Separate preview-gated Copilot Usage Records Streaming, enterprise eligibility, potential request/response content and limits. Do not equate this channel with ordinary audit-UI events or assume it is enabled.
+
+## E06
+
+[Searching the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/searching-the-audit-log-for-your-enterprise)
+
+Retrieved **2026-10-21**. Date/action/actor/repository qualifiers, event scope and default time filtering.
 
 ## Revalidation procedure
 

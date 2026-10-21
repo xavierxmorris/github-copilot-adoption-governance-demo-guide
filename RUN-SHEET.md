@@ -2,6 +2,8 @@
 
 Audience: platform/engineering leadership, enterprise administrators, security, compliance and developer enablement. Start with [preflight](docs/PREFLIGHT.md). Use read-only live evidence when approved; otherwise announce the documentation/synthetic mode.
 
+For exact GitHub navigation, roles, expected results and fallback steps, use the [click-by-click walkthrough](GITHUB-STEP-BY-STEP.md). Its steps map to the timeboxes below; supporting administrator views should be prepared before the session.
+
 **Opening disclaimer:** "We will demonstrate where controls apply, where they do not, and what evidence they produce. The public reporting example uses invented data. We will not change policies, reveal secrets or approve workflows."
 
 | Clock | Duration | Action and presenter wording | Proof / fallback | Question to ask |
